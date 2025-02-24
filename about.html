@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-card {
+            background-color: #112240; /* Warna latar belakang kartu layanan */
+            border-radius: 0.5rem;
+            box-shadow: 0 0 20px rgba(30, 144, 255, 0.2); /* Bayangan kartu dengan warna biru */
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px); /* Efek hover */
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: #1e90ff; /* Warna ikon menjadi biru terang */
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .service-description {
+            margin-top: 1rem;
+            color: #a0aec0; /* Warna deskripsi tetap sama, bisa diubah jika perlu */
+        }
+
+        .learn-more-btn {
+            background-color: #1e90ff; /* Warna tombol menjadi biru terang */
+            color: #0a192f; /* Warna teks tombol */
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #00b3b3; /* Warna tombol saat hover */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+            Siti <span>Haula Fauziah</span>
+        </div>
+        <div class="nav-container">
+            <div class="links">
+                <a href="index.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Beranda</a>
+                <a href="about.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Tentang Saya</a>
+                <a href="skills.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Kemampuan</a>
+                <a href="project.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Project</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang saya</a>
+                <a href="skills.html">Kemampuan</a>
+                <a href="project.html">Project</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>    
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-12">
+        <h1 class=" text-center text-4xl font-bold mb-8">Tentang <span class="text-blue-500">Saya</span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div class="service-card">
+                <h2 class="service-title">Pendidikan</h2>
+                <p class="service-description">Saya lulusan SMKN 4 Bandung dengan dasar rekayasa perangkat lunak, termasuk pemrograman, pengembangan aplikasi, dan manajemen proyek IT. Saya memiliki pemahaman dasar front-end development (HTML, CSS, JavaScript) serta konsep UI/UX. Terbiasa bekerja dalam tim dan terus mengembangkan keterampilan di teknologi dan desain web.</p>
+            </div>
+            <div class="service-card">
+                <h2 class="service-title">Pengalaman kerja</h2>
+                <p class="service-description">Saat PKL di PT Web Hade, saya berperan sebagai Front-End Developer dan UI/UX Designer dalam pengembangan aplikasi web attendance. Saya merancang dan mengimplementasikan antarmuka dengan React, memastikan desain responsif dan user-friendly. Selain itu, saya terlibat dalam proses UI/UX dari wireframing hingga penerapan desain, mengasah keterampilan coding, desain, dan kerja tim.
+               </p>
+            </div>
+            <div class="service-card">
+                <h2 class="service-title">Pengalaman Organisasi</h2>
+                <p class="service-description">Sebagai Bendahara OSIS, saya mengelola administrasi keuangan, mencatat transaksi, menyusun laporan, dan mengarsipkan dokumen. Saya juga mengatur rapat anggaran serta memastikan transparansi keuangan. Pengalaman ini mengasah keterampilan administrasi, kerja tim, serta membangun disiplin dan integritas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+</body>
+</html>

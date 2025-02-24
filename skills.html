@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemampuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .progress-bar {
+            background-color: #001f3f; /* Ganti latar belakang progress bar menjadi biru gelap */
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .progress {
+            background-color: #1e90ff; /* Ganti warna progress menjadi biru terang */
+            height: 8px;
+            border-radius: 9999px;
+        }
+        .skills-table {
+            border: 1px solid #001f3f; /* Ganti warna border tabel menjadi biru gelap */
+            padding: 16px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .skill-description {
+            display: none;
+            color: #a0aec0; /* Warna deskripsi tetap sama, bisa diubah jika perlu */
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+            Siti <span>Haula Fauziah</span>
+        </div>
+        <div class="nav-container">
+            <div class="links">
+                <a href="index.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Beranda</a>
+                <a href="about.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Tentang Saya</a>
+                <a href="skills.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Kemampuan</a>
+                <a href="project.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Project</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang saya</a>
+                <a href="skills.html">Kemampuan</a>
+                <a href="project.html">Project</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>    
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-12">
+        <h1 class=" text-center text-4xl font-bold mb-8">My <span class="text-blue-500">Skills</span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="skills-table">
+                <h2 class="text-2xl font-semibold mb-4">Hard Skills</h2>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('html-desc')">
+                        <span>HTML</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p id="html-desc" class="skill-description">Saya memiliki pemahaman yang kuat dalam HTML dengan tingkat kemahiran sekitar 80%, mampu membuat struktur halaman web yang semantik, rapi, dan sesuai standar. Saya juga terbiasa mengoptimalkan penggunaan elemen HTML untuk mendukung desain responsif dan aksesibilitas.</p>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('css-desc')">
+                        <span>CSS</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <p id="css-desc" class="skill-description">Saya memiliki pemahaman CSS sebesar 75%, mampu merancang tampilan web yang responsif dan estetis. Saya terbiasa menggunakan styling, flexbox, grid, serta animasi untuk meningkatkan pengalaman pengguna dan memastikan desain yang konsisten.</p>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('js-desc')">
+                        <span>JavaScript</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <p id="js-desc" class="skill-description">Saya memiliki pemahaman JavaScript sebesar 65%, mampu mengimplementasikan interaktivitas pada web, mengelola DOM, serta menggunakan fungsi dasar dan event handling. Saya juga memahami konsep dasar ES6 dan terbiasa bekerja dengan framework seperti React.</p>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('python-desc')">
+                        <span>React</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                    <p id="python-desc" class="skill-description">Saya memiliki pemahaman React sebesar 50%, mampu membangun komponen dasar, mengelola state dan props, serta memahami konsep hooks dan routing. Saya terus mengembangkan keterampilan dalam membangun aplikasi web interaktif dengan React.</p>
+                </div>
+            </div>
+            <div class="skills-table">
+                <h2 class="text-2xl font-semibold mb-4">Soft Skills</h2>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('web-design-desc')">
+                        <span>Public Speaking</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p id="web-design-desc" class="skill-description">Saya memiliki kemampuan public speaking sebesar 80%, mampu menyampaikan ide dengan jelas, percaya diri, dan persuasif. Saya terbiasa berbicara di depan umum, menyusun presentasi yang menarik, serta berkomunikasi secara efektif untuk berbagai audiens.</p>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('web-dev-desc')">
+                        <span>Time Work</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p id="web-dev-desc" class="skill-description">Saya memiliki kemampuan time management sebesar 90%, mampu mengatur dan memprioritaskan tugas dengan efisien, bekerja dengan tenggat waktu, serta menjaga produktivitas tinggi dalam berbagai proyek dan kerja tim.</p>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 cursor-pointer" onclick="toggleDescription('graphic-design-desc')">
+                        <span>Time Management</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <p id="graphic-design-desc" class="skill-description">Saya memiliki kemampuan time management sebesar 85%, mampu mengatur jadwal, memprioritaskan tugas, dan bekerja secara efisien untuk memenuhi tenggat waktu. Saya terbiasa mengelola berbagai proyek dengan disiplin dan tetap produktif.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+</body>
+</html>

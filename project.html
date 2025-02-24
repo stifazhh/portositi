@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(30, 144, 255, 0.2); /* Mengatur warna bayangan */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+            Siti <span>Haula Fauziah</span>
+        </div>
+        <div class="nav-container">
+            <div class="links">
+                <a href="index.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Beranda</a>
+                <a href="about.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Tentang Saya</a>
+                <a href="skills.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Kemampuan</a>
+                <a href="project.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Project</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang saya</a>
+                <a href="skills.html">Kemampuan</a>
+                <a href="project.html">Project</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>    
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-10">
+        <h1 class=" text-center text-4xl font-bold mb-5">Project <span class="text-blue-500">Saya</span></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 ">
+         <!-- Technical Documentation Card -->
+         <div class="bg-white rounded-lg shadow-lg p-6">
+          <img alt="Technical Documentation Screenshot" class="rounded-lg mb-4 w-full h-48 object-cover" src="asset/medic4.png"/>
+          <h2 class="text-2xl font-bold text-blue-800">
+            <a href="https://github.com/stifazhh/medic4" class="hover:underline">Website Medic4</a>
+        </h2>
+          <p class="text-gray-600 mt-2">
+            UKS Online adalah website berbasis Laravel yang mempermudah pengelolaan data kesehatan siswa. Sebagai Front-End Developer, saya bertanggung jawab merancang dan mengimplementasikan antarmuka yang responsif dan user-friendly menggunakan HTML, CSS, dan JavaScript. Saya juga berkolaborasi dengan tim backend untuk memastikan integrasi data berjalan dengan baik, sehingga meningkatkan pengalaman pengguna.
+          </p>
+         </div>
+         <!-- Tribute Page Card -->
+         <div class="bg-white rounded-lg shadow-lg p-6">
+          <img alt="Tribute Page Screenshot" class="rounded-lg mb-4 w-full h-48 object-cover" src="asset/ecommerce.png"/>
+          <h2 class="text-2xl font-bold text-blue-800">
+            <a href="https://github.com/stifazhh/JaketPedia" class="hover:underline">Website JaketPedia</a>
+        </h2>
+          <p class="text-gray-600 mt-2">
+            Website e-commerce ini dikembangkan dengan Vue.js untuk memberikan pengalaman belanja online yang responsif dan user-friendly. Saya bertanggung jawab membangun antarmuka, mengimplementasikan fitur seperti katalog produk, keranjang belanja, dan checkout, serta memastikan performa website tetap cepat dan efisien.
+          </p>
+         </div>
+        </div>
+       </div>
+      </body>
+     </html>
+     
+     
+     
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+</body>
+</html>
